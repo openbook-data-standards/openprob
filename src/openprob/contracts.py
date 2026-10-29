@@ -16,7 +16,7 @@ def timestamp(value: datetime) -> None:
 
 
 def probability(value: float) -> None:
-    if isinstance(value, bool) or not isinstance(value, (int, float)):
+    if isinstance(value, bool) or not isinstance(value, int | float):
         raise ValueError("Probability must be a finite number in [0, 1]")
     if not 0 <= value <= 1 or not isfinite(value):
         raise ValueError("Probability must be a finite number in [0, 1]")
