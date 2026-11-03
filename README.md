@@ -47,4 +47,4 @@ For an honest study, freeze the model before a temporal holdout, supply only fea
 
 Code: `src/openprob/`. Synthetic contract cases: `tests/test_openprob.py`.
 
-Lint: `ruff check src tests`; format check: `ruff format --check src tests`. Do not run tests locally. CI execution and remote publication require owner authorization; no CI workflow is installed by this initial local build. No hosted model-code execution, network calls, tracking or recurring jobs are included.
+Lint: `ruff check src tests`; format check: `ruff format --check src tests`. Do not run tests locally. `.github/workflows/ci.yml` runs `ruff check` and `python -m unittest discover -s tests` on every push and pull request. No hosted model-code execution, network calls, tracking or recurring jobs are included.
